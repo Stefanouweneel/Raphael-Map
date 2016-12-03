@@ -36,3 +36,11 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+#vietnam {
+  display: none;
+}
+
+#cambodia {
+  display: none;
+}
