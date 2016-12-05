@@ -18,7 +18,7 @@ for (var i = 0; i < rsrGroups.length; i++) {
       case 'path6044':
         cambodia.style.display = "block";
         break;
-      case 'path3562':
+      case 'vietnam':
         vietnam.style.display = "block";
         break;
       default:
