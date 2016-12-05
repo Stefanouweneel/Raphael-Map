@@ -1,6 +1,5 @@
 var modal = document.getElementById('infoModal');
 var overlay = document.getElementById('overlay');
-var span = document.getElementsByClassName("close")[0];
 
 var setCountry = function(name, description) {
   var country = {};
@@ -27,6 +26,7 @@ var hoverCountry = function() {
   for (var i = 0; i < regions.length; i++) {
     regions[i].mouseover(function() {
       this.node.style.opacity = 0.5;
+      document.getElementById('region-name').innerHTML = this.data('id');
     });
     regions[i].mouseout(function() {
       this.node.style.opacity = 1;
