@@ -235,33 +235,6 @@ tl.transform("t0.203626, 1.917873");
 
 var bn = rsr.set();
 
-var bn = rsr.path("M13.8700746,26.9438836 C29.8704687,26.9438836 29.8704687,2.02355453 13.8700746,2.02355453 C-2.14192207,2.02355453 -2.14192207,26.9438836 13.8700746,26.9438836").attr({
-  id: 'bn.',
-  opacity: '0',
-  "stroke-width": '1.09',
-  "fill-opacity": '0.98823529',
-  stroke: '#FFFFFF',
-  fill: '#1E90FF',
-  "fill-rule": 'evenodd',
-  parent: 'Page1',
-  'stroke-opacity': '1'
-}).transform("t366.606146, 418.904467").data('id', 'bn');
-
-bn.attr({
-  'id': 'bn',
-  'stroke-width': '1.0892171',
-  'fill-opacity': '0.98823529',
-  'stroke': '#FFFFFF',
-  'fill': '#1E90FF',
-  'fill-rule': 'evenodd',
-  'parent': 'Page1',
-  'name': 'bn'
-});
-
-bn.transform("t366.606146, 418.904467");
-
-var bn = rsr.set();
-
 var brunei = rsr.path("M1.07324012,8.13955762 C7.07551159,7.98621564 9.15154749,2.66897918 14.1945329,0.716977326 C16.4383921,-0.151269783 15.441812,2.82646553 14.4845978,3.59939195 C12.2635295,5.39183526 11.8387916,5.72545766 12.2220916,8.83788524 C12.25317,9.08862009 13.674488,20.3675437 10.0963303,17.8664119 C8.74338475,16.9214938 5.71635036,14.8327274 4.80471783,13.3635456 C3.48492255,11.2478408 4.09405883,8.78608052 1.07324012,8.13955762 M15.555766,5.60319852 C15.0999498,2.86169274 16.575137,4.69557983 17.3375933,2.47004905 C19.51308,5.25299861 20.4433595,9.28340583 20.1760855,12.764683 C16.7326008,11.9917566 15.7401644,8.73842018 15.555766,5.60319852").attr({
   id: 'Brunei',
   "stroke-width": '1.09',
@@ -274,7 +247,7 @@ var brunei = rsr.path("M1.07324012,8.13955762 C7.07551159,7.98621564 9.15154749,
 }).transform("t366.606146, 418.904467").data('id', 'Brunei');
 
 bn.attr({
-  'id': 'bn-',
+  'id': 'bn',
   'transformG': 'translate(366.606146, 418.904467)',
   'stroke-width': '1.0892171',
   'fill-opacity': '0.98823529',
@@ -289,7 +262,7 @@ bn.transform("t4.347410, 3.990062");
 
 var sg = rsr.set();
 
-var Singapore = rsr.path("M9.17081609,10.8034599 C7.18387155,11.3256515 10.2254092,15.1115405 12.9002219,11.5473757 C11.7213153,10.9858125 10.47818,10.7371499 9.17081609,10.8034599").attr({
+var singapore = rsr.path("M9.17081609,10.8034599 C7.18387155,11.3256515 10.2254092,15.1115405 12.9002219,11.5473757 C11.7213153,10.9858125 10.47818,10.7371499 9.17081609,10.8034599").attr({
   id: 'Singapore',
   "stroke-width": '1.09',
   stroke: '#FFFFFF',
@@ -301,9 +274,10 @@ var Singapore = rsr.path("M9.17081609,10.8034599 C7.18387155,11.3256515 10.22540
 
 sg.attr({
   'id': 'sg',
-  'stroke-width': '0.1',
+  'transformG': 'translate(200.854777, 476.925753)',
+  'stroke-width': '1',
   'stroke': '#FFFFFF',
-  'fill': '#ff0000',
+  'fill': '#1E90FF',
   'fill-rule': 'evenodd',
   'parent': 'Page1',
   'name': 'sg'
@@ -311,7 +285,7 @@ sg.attr({
 
 sg.transform("t200.854777, 476.925753");
 
-var rsrGroups = [Page1, la, ind, th, mm, vn, my, ph, kh, tl, bn, sg];
+var regions = [Page1, la, ind, th, mm, vn, my, ph, kh, tl, bn, sg];
 Page1.push();
 la.push(laos);
 ind.push(indonesia);
@@ -323,4 +297,4 @@ ph.push(philippines);
 kh.push(cambodia);
 tl.push(east_timor);
 bn.push(brunei);
-sg.push(sg);
+sg.push(singapore);

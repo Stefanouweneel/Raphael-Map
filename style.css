@@ -36,10 +36,6 @@
   cursor: pointer;
 }
 
-#vietnam {
-  display: none;
-}
-
-#cambodia {
+.regions {
   display: none;
 }
