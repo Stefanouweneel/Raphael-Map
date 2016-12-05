@@ -1,4 +1,5 @@
 var modal = document.getElementById('infoModal');
+var overlay = document.getElementById('overlay');
 var span = document.getElementsByClassName("close")[0];
 
 var setCountry = function(name, description) {
@@ -22,28 +23,47 @@ var singapore = setCountry("Singapore", "This is Singapore");
 
 var countries = [laos, indonesia, thailand, myanmar, vietnam, malaysia, philippines, cambodia, east_timor, brunei, singapore];
 
-for (var i = 0; i < regions.length; i++) {
-  regions[i].mouseover(function() {
-    this.node.style.opacity = 0.5;
-  });
-  regions[i].mouseout(function() {
-    this.node.style.opacity = 1;
-  });
-  regions[i].click(function() {
-    modal.style.display = "block";
-    span.onclick = function() {
-      modal.style.display = "none";
-    };
-    for (var i = 0; i < countries.length; i++) {
-      if (this.data('id') == countries[i].name) {
-        document.getElementById('country-name').innerHTML = countries[i].name;
-        document.getElementById('country-content').innerHTML = countries[i].description;
+var hoverCountry = function() {
+  for (var i = 0; i < regions.length; i++) {
+    regions[i].mouseover(function() {
+      this.node.style.opacity = 0.5;
+    });
+    regions[i].mouseout(function() {
+      this.node.style.opacity = 1;
+    });
+  }
+}
+
+var openModal = function() {
+  for (var i = 0; i < regions.length; i++) {
+    regions[i].click(function() {
+      modal.style.display = "block";
+      overlay.style.display = "block";
+      for (var i = 0; i < countries.length; i++) {
+        if (this.data('id') == countries[i].name) {
+          document.getElementById('country-name').innerHTML = countries[i].name;
+          document.getElementById('country-content').innerHTML = countries[i].description;
+        }
       }
+    });
+  }
+}
+
+var closeModal = function(e) {
+  $('#close, #overlay').click(function(e) {
+    modal.style.display = "none";
+    overlay.style.display = "none";
+    e.preventDefault();
+  });
+  $(document).keyup(function(e) {
+    if (e.which == 27) {
+      modal.style.display = "none";
+      overlay.style.display = "none";
+      e.preventDefault();
     }
   });
 }
-// window.onclick = function(event) {
-//   if (event.target != modal) {
-//       modal.style.display = "none";
-//   }
-// };
+
+hoverCountry();
+openModal();
+closeModal();

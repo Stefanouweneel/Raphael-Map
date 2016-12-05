@@ -2,18 +2,20 @@
 <head>
   <title>Map</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <div id="map" class="south-east-map">
-    </div>
+  <div id="map" class="south-east-map">
+  </div>
+  <div id="overlay">
     <div id="infoModal" class="modal">
       <div class="modal-content">
-        <span class="close">x</span>
-        <div id="country-name"></div>
+        <div id="close">x</div>
+        <h3 id="country-name"></h3>
         <div id="country-content"></div>
       </div>
     </div>
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script type="text/javascript" src="raphael.min.js"></script>
   <script type="text/javascript" src="map.js"></script>
